@@ -471,6 +471,8 @@
         "kind": "audio",
         "metadata": "",
         "name": "life lost sound.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
         "userAdded": true
       },
       {
@@ -946,10 +948,28 @@
       },
       {
         "alwaysLoaded": false,
+        "file": "SpeechBubble_WhatsThat.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "SpeechBubble_WhatsThat.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
         "file": "AirLeak.png",
         "kind": "image",
         "metadata": "",
         "name": "AirLeak.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "SpeechBubble_DimmedLights.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "SpeechBubble_DimmedLights.png",
         "smoothed": true,
         "userAdded": true
       },
@@ -999,90 +1019,38 @@
         "userAdded": false
       },
       {
-        "file": "Bimbo_JVE.ttf",
-        "kind": "font",
-        "metadata": "",
-        "name": "Bimbo_JVE.ttf",
-        "userAdded": true
-      },
-      {
         "alwaysLoaded": false,
-        "file": "stadium_light-1.png",
+        "file": "LightSwitch_Neutral.png",
         "kind": "image",
         "metadata": "",
-        "name": "stadium_light-1.png",
+        "name": "LightSwitch_Neutral.png",
         "smoothed": true,
         "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "SpeechBubble_WhatsThat.png",
+        "file": "LightSwitch_On.png",
         "kind": "image",
         "metadata": "",
-        "name": "SpeechBubble_WhatsThat.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "SpeechBubble_DimmedLights.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "SpeechBubble_DimmedLights.png",
+        "name": "LightSwitch_On.png",
         "smoothed": true,
         "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "SpeechBubble_sm.png",
+        "file": "LightSwitch_Off.png",
         "kind": "image",
         "metadata": "",
-        "name": "SpeechBubble_sm.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "SpeechBubble_lg.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "SpeechBubble_lg.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "NewFile-1-0.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "NewFile-1-0.png",
+        "name": "LightSwitch_Off.png",
         "smoothed": true,
         "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "NewFile-1-1.png",
+        "file": "ResearchCentre.png",
         "kind": "image",
         "metadata": "",
-        "name": "NewFile-1-1.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "NewFile-1-2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "NewFile-1-2.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Wheelchair_Empty2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Wheelchair_Empty2.png",
+        "name": "ResearchCentre.png",
         "smoothed": true,
         "userAdded": true
       }
@@ -1091,16 +1059,7 @@
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [
-    {
-      "name": "Lives",
-      "value": "3"
-    },
-    {
-      "name": "JustDied",
-      "value": "0"
-    }
-  ],
+  "variables": [],
   "layouts": [
     {
       "b": 247,
@@ -1123,10 +1082,11 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 70,
-        "snap": false,
+        "snap": true,
         "windowMask": true,
-        "zoomFactor": 0.7192
+        "zoomFactor": 0.7605999999999999
       },
       "objectsGroups": [
         {
@@ -1162,97 +1122,63 @@
               "name": "BottomButton"
             }
           ]
-        },
-        {
-          "name": "Indicators",
-          "objects": [
-            {
-              "name": "FuelCanIndicator"
-            },
-            {
-              "name": "HeliumIndicator"
-            },
-            {
-              "name": "FuelText"
-            },
-            {
-              "name": "HeliumText"
-            }
-          ]
-        },
-        {
-          "name": "Pickups",
-          "objects": []
-        },
-        {
-          "name": "SpeechGroup",
-          "objects": [
-            {
-              "name": "SpeechBubble"
-            },
-            {
-              "name": "SpeechText"
-            }
-          ]
-        },
-        {
-          "name": "PlayerGroup",
-          "objects": [
-            {
-              "name": "Player"
-            },
-            {
-              "name": "PlayerLight"
-            },
-            {
-              "name": "PlayerFlashlight"
-            }
-          ]
         }
       ],
       "variables": [
         {
           "name": "Score",
+          "type": "string",
           "value": "0"
         },
         {
           "name": "CheckpointX",
+          "type": "string",
           "value": "0"
         },
         {
           "name": "CheckpointY",
+          "type": "string",
           "value": "0"
         },
         {
           "name": "PlayerJustDead",
+          "type": "string",
           "value": ""
-        },
-        {
-          "name": "Inventory",
-          "value": ""
-        },
-        {
-          "name": "SpeechNumber",
-          "value": "0"
-        },
-        {
-          "name": "SpeechOffsetX",
-          "value": "0"
-        },
-        {
-          "name": "CameraZoom",
-          "value": "1"
-        },
-        {
-          "name": "SpeechDelay",
-          "value": "0"
-        },
-        {
-          "name": "Challenge_1_2_Complete",
-          "value": "0"
         }
       ],
       "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 111,
+          "layer": "",
+          "locked": false,
+          "name": "Player",
+          "persistentUuid": "788c041d-1b63-42b6-a22a-e95262a08f83",
+          "width": 83,
+          "x": -35,
+          "y": 290.508,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Platform",
+          "persistentUuid": "cfb83ad3-a943-4e6e-aeb7-d35ccdf7f90f",
+          "width": 0,
+          "x": 683,
+          "y": 367,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
         {
           "angle": 0,
           "customSize": false,
@@ -1262,8 +1188,8 @@
           "name": "Platform",
           "persistentUuid": "a62a7ebb-d296-4348-bcdf-c8469ac6769b",
           "width": 0,
-          "x": 2208,
-          "y": 429,
+          "x": 753,
+          "y": 367,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1481,13 +1407,13 @@
           "angle": 0,
           "customSize": true,
           "height": 140,
-          "layer": "Lighting",
-          "locked": true,
+          "layer": "",
+          "locked": false,
           "name": "FullMoon",
           "persistentUuid": "5f3adac7-71d8-4cd2-86ba-95fc9509ddd7",
           "width": 140,
-          "x": 690,
-          "y": 21,
+          "x": -91,
+          "y": 40,
           "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
@@ -1526,7 +1452,7 @@
           "initialVariables": []
         },
         {
-          "angle": 34.6572,
+          "angle": 34.657169342041016,
           "customSize": false,
           "height": 0,
           "layer": "",
@@ -1537,6 +1463,22 @@
           "x": -212,
           "y": 517,
           "zOrder": 34,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 64,
+          "layer": "",
+          "locked": false,
+          "name": "FuelCan",
+          "persistentUuid": "7d4b5b3a-b5ad-4a00-96b7-67b6d7c9ce96",
+          "width": 64,
+          "x": 719,
+          "y": 298,
+          "zOrder": 37,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1559,31 +1501,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "StadiumLight",
-          "persistentUuid": "e51452b8-6a12-42d7-9690-6dfa5a0b5f41",
-          "width": 0,
-          "x": 1105,
-          "y": -101,
-          "zOrder": 39,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
-          "height": 85,
+          "height": 172,
           "layer": "",
           "locked": false,
           "name": "Helium",
           "persistentUuid": "e8e1e334-5e5a-4dd6-91a0-777e592dc7e7",
-          "width": 48,
-          "x": 2392,
-          "y": 488,
+          "width": 98,
+          "x": 1207,
+          "y": 408,
           "zOrder": 40,
           "numberProperties": [],
           "stringProperties": [],
@@ -1592,14 +1518,30 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 110,
+          "height": 135,
+          "layer": "",
+          "locked": false,
+          "name": "Wheelchair_Empty",
+          "persistentUuid": "70776e0a-e30a-476d-ad44-5f3f7ea024f1",
+          "width": 157,
+          "x": 1314,
+          "y": 443,
+          "zOrder": 41,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 186,
           "layer": "",
           "locked": false,
           "name": "Wheelchair_Seated",
           "persistentUuid": "3ff30f84-5d9a-4beb-93c4-6cdd25e45cd5",
-          "width": 137,
-          "x": 1925,
-          "y": 360,
+          "width": 233,
+          "x": 1546,
+          "y": 395,
           "zOrder": 42,
           "numberProperties": [],
           "stringProperties": [],
@@ -1609,30 +1551,14 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "Lighting",
-          "locked": false,
-          "name": "SpeechBubble",
-          "persistentUuid": "b0095035-8716-4420-89db-2fcd1f03341f",
-          "width": 0,
-          "x": 332,
-          "y": 85,
-          "zOrder": 47,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
           "layer": "",
           "locked": false,
-          "name": "SpeechText",
-          "persistentUuid": "88e5f34e-8c18-4c3a-b7c5-91e4947d3281",
+          "name": "SpeechBubble01",
+          "persistentUuid": "aba66492-f8b9-4dc6-becc-f4dcbbd83c2d",
           "width": 0,
-          "x": 374,
-          "y": 139,
-          "zOrder": 49,
+          "x": 64,
+          "y": 308,
+          "zOrder": 43,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1640,15 +1566,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 64,
+          "height": 613,
           "layer": "",
           "locked": false,
-          "name": "FuelCan",
-          "persistentUuid": "1e8c6164-6951-4c55-80e7-3d8b3413b09e",
-          "width": 64,
-          "x": 2164,
-          "y": 323,
-          "zOrder": 37,
+          "name": "ResearchCentre",
+          "persistentUuid": "465e72c4-5350-4993-8070-77ac74458e73",
+          "width": 437,
+          "x": 2472,
+          "y": -28,
+          "zOrder": 44,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1657,350 +1583,14 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Platform",
-          "persistentUuid": "33d836db-1407-4559-bfa6-78cfa41196b8",
-          "width": 0,
-          "x": 1643,
-          "y": 499,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Platform",
-          "persistentUuid": "e908be09-5d93-4a9f-968a-d80c8b320392",
-          "width": 0,
-          "x": 2139,
-          "y": 499,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Platform",
-          "persistentUuid": "11d2ae41-b1b1-497c-a08c-bdb9dcacaf63",
-          "width": 0,
-          "x": 2209,
-          "y": 499,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Platform",
-          "persistentUuid": "7d86d9c1-25b1-424f-b74f-55ddb5a61ee2",
-          "width": 0,
-          "x": 2138,
-          "y": 429,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "Lighting",
-          "locked": false,
-          "name": "Light",
-          "persistentUuid": "c66495dc-01d0-4584-aac6-3e9a792698ca",
-          "width": 0,
-          "x": 1142,
-          "y": -42,
-          "zOrder": 100,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 111,
-          "layer": "",
-          "locked": true,
-          "name": "Player",
-          "persistentUuid": "3a79cee0-3ce5-4481-a1ec-81b16a1aaefb",
-          "width": 83,
-          "x": -35,
-          "y": 290.508,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 46,
-          "layer": "HUD",
-          "locked": true,
-          "name": "HeliumIndicator",
-          "persistentUuid": "ca416eea-f36c-457f-902d-610473d4c00a",
-          "width": 26,
-          "x": 50,
-          "y": 5,
-          "zOrder": 250,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 34,
-          "layer": "HUD",
-          "locked": true,
-          "name": "FuelCanIndicator",
-          "persistentUuid": "b619988d-ce2d-4217-8c8a-ad583b31a797",
-          "width": 34,
-          "x": 11,
-          "y": 16,
-          "zOrder": 250,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "Lighting",
-          "locked": false,
-          "name": "PlayerLight",
-          "persistentUuid": "b79d886a-169b-4359-a24b-5b02b8e9fc00",
-          "width": 0,
-          "x": 27,
-          "y": 356,
-          "zOrder": 201,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "SpeechBubble",
-          "persistentUuid": "2aff1d8d-62f9-484f-94dc-1bd13511e75e",
-          "width": 0,
-          "x": 332,
-          "y": 85,
-          "zOrder": 47,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "PlayerFlashlight",
-          "persistentUuid": "2928faeb-fe97-424e-ac35-49afce43b211",
-          "width": 0,
-          "x": 28,
-          "y": 298,
-          "zOrder": 202,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Platform",
-          "persistentUuid": "53f33c11-444a-4c5f-bfb7-17fdc858948d",
-          "width": 0,
-          "x": 1782,
-          "y": 429,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Platform",
-          "persistentUuid": "de049c65-d224-4852-ae93-95020985b4ac",
-          "width": 0,
-          "x": 1712,
-          "y": 429,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Platform",
-          "persistentUuid": "31505cb2-7858-4b9c-95be-107bb15c2d6d",
-          "width": 0,
-          "x": 1713,
-          "y": 499,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "Platform",
-          "persistentUuid": "aacc2c60-ad03-4780-911c-c673e268c1a9",
-          "width": 0,
-          "x": 1783,
-          "y": 499,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 88,
           "layer": "",
           "locked": false,
           "name": "LightSwitch",
-          "persistentUuid": "2a2e9ec3-7976-4906-9b88-147f6208db6d",
-          "width": 88,
-          "x": 1291,
-          "y": -215,
-          "zOrder": 203,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 140,
-          "layer": "",
-          "locked": false,
-          "name": "FullMoon",
-          "persistentUuid": "b8453c9b-2c83-4eae-b2f6-5d35a79630c5",
-          "width": 140,
-          "x": 690,
-          "y": 21,
-          "zOrder": 31,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 99,
-          "layer": "Lighting",
-          "locked": true,
-          "name": "Wheelchair",
-          "persistentUuid": "22ebf354-3c82-4e8a-9d2c-8593e346344e",
-          "width": 115,
-          "x": 1972,
-          "y": 366,
-          "zOrder": 205,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 99,
-          "layer": "",
-          "locked": false,
-          "name": "Wheelchair",
-          "persistentUuid": "dd17a307-6939-48f7-89b4-916b125c4c0a",
-          "width": 115,
-          "x": 1972,
-          "y": 366,
-          "zOrder": 205,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "Lighting",
-          "locked": false,
-          "name": "LightSwitchLight",
-          "persistentUuid": "f3795712-1c7a-448e-9c6c-6a4e6156288a",
+          "persistentUuid": "9363c52b-b2d2-4132-a89c-1ab8de6be6f9",
           "width": 0,
-          "x": 1333,
-          "y": -173,
-          "zOrder": 251,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "HUD",
-          "locked": false,
-          "name": "FuelText",
-          "persistentUuid": "9f68797e-b248-4bdf-b134-f561c33ac0f8",
-          "width": 0,
-          "x": 12,
-          "y": 55,
-          "zOrder": 252,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "HUD",
-          "locked": false,
-          "name": "HeliumText",
-          "persistentUuid": "a5bd8996-242b-4e4f-ae1a-90a7efe962e9",
-          "width": 0,
-          "x": 50,
-          "y": 55,
-          "zOrder": 253,
+          "x": 2510,
+          "y": 248,
+          "zOrder": 45,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2313,29 +1903,6 @@
           "variables": [],
           "behaviors": [
             {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Static",
-              "bullet": false,
-              "fixedRotation": false,
-              "canSleep": true,
-              "shape": "Box",
-              "shapeDimensionA": 69,
-              "shapeDimensionB": 69,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 1,
-              "friction": 0.3,
-              "restitution": 0.1,
-              "linearDamping": 0.1,
-              "angularDamping": 0.1,
-              "gravityScale": 1,
-              "layers": 1,
-              "masks": 1
-            },
-            {
               "name": "Platform",
               "type": "PlatformBehavior::PlatformBehavior",
               "canBeGrabbed": true,
@@ -2517,29 +2084,6 @@
           "width": 70,
           "variables": [],
           "behaviors": [
-            {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Static",
-              "bullet": false,
-              "fixedRotation": false,
-              "canSleep": true,
-              "shape": "Box",
-              "shapeDimensionA": 0,
-              "shapeDimensionB": 0,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 1,
-              "friction": 0.3,
-              "restitution": 0.1,
-              "linearDamping": 0.1,
-              "angularDamping": 0.1,
-              "gravityScale": 1,
-              "layers": 1,
-              "masks": 1
-            },
             {
               "name": "Platform",
               "type": "PlatformBehavior::PlatformBehavior",
@@ -2851,6 +2395,7 @@
           "variables": [
             {
               "name": "GoingLeft",
+              "type": "string",
               "value": "0"
             }
           ],
@@ -3860,80 +3405,12 @@
           ]
         },
         {
-          "name": "FuelCanIndicator",
+          "name": "FuelCan",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "fuel.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "FuelCan",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "Percentage",
-              "value": "100"
-            }
-          ],
-          "behaviors": [
-            {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Dynamic",
-              "bullet": false,
-              "fixedRotation": true,
-              "canSleep": true,
-              "shape": "Box",
-              "shapeDimensionA": 81,
-              "shapeDimensionB": 92,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": -18,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 1,
-              "friction": 0.3,
-              "restitution": 0.1,
-              "linearDamping": 0.1,
-              "angularDamping": 0.1,
-              "gravityScale": 1,
-              "layers": 1,
-              "masks": 1
-            }
-          ],
           "animations": [
             {
               "name": "",
@@ -4126,7 +3603,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "stadium_light",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -4135,80 +3612,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "stadium_light-1.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "HeliumIndicator",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "Pressure Low to High",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.16,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Helium_LowPressure.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Helium_MedPressure.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Helium_HiPressure.png",
+                      "image": "stadium_light.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4234,12 +3638,7 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "Percentage",
-              "value": "100"
-            }
-          ],
+          "variables": [],
           "behaviors": [],
           "animations": [
             {
@@ -4248,7 +3647,7 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.16,
+                  "timeBetweenFrames": 0.1599999964237213,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -4308,43 +3707,15 @@
           ]
         },
         {
-          "name": "Wheelchair",
+          "name": "Wheelchair_Empty",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [
-            {
-              "name": "Inflation",
-              "value": "0"
-            },
-            {
-              "name": "Boosting",
-              "value": "0"
-            }
-          ],
-          "behaviors": [
-            {
-              "acceleration": 1500,
-              "canGrabPlatforms": false,
-              "deceleration": 1500,
-              "gravity": 1000,
-              "ignoreDefaultControls": true,
-              "jumpSpeed": 0,
-              "jumpSustainTime": 0.2,
-              "ladderClimbingSpeed": 150,
-              "maxFallingSpeed": 100,
-              "maxSpeed": 250,
-              "name": "PlatformerObject",
-              "roundCoordinates": true,
-              "slopeMaxAngle": 60,
-              "type": "PlatformBehavior::PlatformerObjectBehavior",
-              "xGrabTolerance": 10,
-              "yGrabOffset": 0
-            }
-          ],
+          "variables": [],
+          "behaviors": [],
           "animations": [
             {
-              "name": "Empty",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -4353,7 +3724,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Wheelchair_Empty2.png",
+                      "image": "Wheelchair_Empty.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4371,14 +3742,24 @@
                   ]
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Wheelchair_Seated",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
             {
-              "name": "Not_Inflated",
+              "name": "Inflating_NoBoostAirLeak",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -4396,19 +3777,7 @@
                         "y": 0
                       },
                       "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Semi_Inflated",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
+                    },
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Wheelchair_Seated_02.png",
@@ -4425,19 +3794,7 @@
                         "y": 0
                       },
                       "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Inflated",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
+                    },
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Wheelchair_Seated_03.png",
@@ -4460,7 +3817,7 @@
               ]
             },
             {
-              "name": "Not_Inflated_Boost",
+              "name": "Inflating_Boost",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -4483,19 +3840,7 @@
                         "y": 0
                       },
                       "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Semi_Inflated_Boost",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
+                    },
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Wheelchair_Seated_Boost_02.png",
@@ -4512,19 +3857,7 @@
                         "y": 0
                       },
                       "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Inflated_Boost",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
+                    },
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Wheelchair_Seated_Boost_03.png",
@@ -4547,7 +3880,7 @@
               ]
             },
             {
-              "name": "Semi_Inflated_Boost_Air",
+              "name": "Inflating_AirLeak",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -4556,7 +3889,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Wheelchair_Seated_Boost_AirLeak_02.png",
+                      "image": "Wheelchair_Seated_AirLeak_01.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4570,48 +3903,7 @@
                         "y": 0
                       },
                       "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Inflated_Boost_Air",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Wheelchair_Seated_Boost_AirLeak_03.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Semi_Inflated_Air",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
+                    },
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Wheelchair_Seated_AirLeak_02.png",
@@ -4628,22 +3920,73 @@
                         "y": 0
                       },
                       "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Wheelchair_Seated_AirLeak_03.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "Inflated_Air",
+              "name": "Inflating_BoostAirLeak",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Wheelchair_Seated_AirLeak_03.png",
+                      "image": "Wheelchair_Seated_Boost_AirLeak_01.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Wheelchair_Seated_Boost_AirLeak_02.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Wheelchair_Seated_Boost_AirLeak_03.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4665,7 +4008,7 @@
           ]
         },
         {
-          "name": "SpeechBubble",
+          "name": "SpeechBubble01",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -4678,7 +4021,7 @@
           ],
           "animations": [
             {
-              "name": "sm",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -4687,7 +4030,46 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "SpeechBubble_sm.png",
+                      "image": "SpeechBubble_WhatsThat.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SpeechBubble02",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "SpeechBubble_DimmedLights.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4707,7 +4089,28 @@
               ]
             },
             {
-              "name": "lg",
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SpeechBubble03",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -4716,7 +4119,163 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "SpeechBubble_lg.png",
+                      "image": "SpeechBubble_WheresLightSwitch.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SpeechBubble04",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "SpeechBubble_20Meters.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SpeechBubble05",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "SpeechBubble_HowCanIGetUpThere.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SpeechBubble06",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "SpeechBubble_Hmmm.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SpeechBubble07",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "SpeechBubble_WhatCanIDo.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4777,101 +4336,15 @@
           ]
         },
         {
-          "bold": false,
-          "italic": false,
-          "name": "SpeechText",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "Dialogue...",
-          "font": "Bimbo_JVE.ttf",
-          "characterSize": 20,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          }
-        },
-        {
-          "name": "Light",
-          "tags": "",
-          "type": "Lighting::LightObject",
-          "variables": [],
-          "behaviors": [],
-          "content": {
-            "radius": 100,
-            "color": "#ffffff",
-            "debugMode": false,
-            "texture": ""
-          }
-        },
-        {
-          "name": "NewObject",
-          "tags": "",
-          "type": "Lighting::LightObject",
-          "variables": [],
-          "behaviors": [],
-          "content": {
-            "radius": 50,
-            "color": "#ffffff",
-            "debugMode": false,
-            "texture": ""
-          }
-        },
-        {
-          "height": 32,
-          "name": "MenuLight",
-          "tags": "",
-          "texture": "NewFile-1-1.png",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "behaviors": []
-        },
-        {
-          "name": "PlayerLight",
-          "tags": "",
-          "type": "Lighting::LightObject",
-          "variables": [],
-          "behaviors": [],
-          "content": {
-            "radius": 30,
-            "color": "#ffffff",
-            "debugMode": false,
-            "texture": ""
-          }
-        },
-        {
-          "name": "PlayerFlashlight",
-          "tags": "",
-          "type": "Lighting::LightObject",
-          "variables": [],
-          "behaviors": [],
-          "content": {
-            "radius": 30,
-            "color": "#fff113",
-            "debugMode": false,
-            "texture": ""
-          }
-        },
-        {
           "name": "LightSwitch",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [
-            {
-              "name": "Tween",
-              "type": "Tween::TweenBehavior"
-            }
-          ],
+          "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Neutral",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -4880,7 +4353,65 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Left.png",
+                      "image": "LightSwitch_Neutral.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "On",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "LightSwitch_On.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Off",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "LightSwitch_Off.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4902,55 +4433,43 @@
           ]
         },
         {
-          "name": "LightSwitchLight",
+          "name": "ResearchCentre",
           "tags": "",
-          "type": "Lighting::LightObject",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
           "variables": [],
           "behaviors": [],
-          "content": {
-            "radius": 50,
-            "color": "#ffffff",
-            "debugMode": false,
-            "texture": ""
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "HeliumText",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "100%",
-          "font": "",
-          "characterSize": 13,
-          "color": {
-            "b": 255,
-            "g": 228,
-            "r": 0
-          }
-        },
-        {
-          "bold": false,
-          "italic": false,
-          "name": "FuelText",
-          "smoothed": true,
-          "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "behaviors": [],
-          "string": "100%",
-          "font": "",
-          "characterSize": 13,
-          "color": {
-            "b": 76,
-            "g": 51,
-            "r": 255
-          }
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ResearchCentre.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -5001,293 +4520,6 @@
                 "PlayerHitBox.X()-12",
                 "=",
                 "PlayerHitBox.Y()"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "FullMoon",
-                "=",
-                "PlayerHitBox.X()/1.5"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "PlayerLight",
-                "=",
-                "PlayerFlashlight.X()",
-                "=",
-                "PlayerFlashlight.Y()"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Lighting::SetRadius"
-              },
-              "parameters": [
-                "Light",
-                "RandomInRange(100,200)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Lighting::SetRadius"
-              },
-              "parameters": [
-                "PlayerLight",
-                "250"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Lighting::SetRadius"
-              },
-              "parameters": [
-                "PlayerFlashlight",
-                "RandomInRange(100,120)"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Flash light control",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "Player",
-                "\"Running\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "FlippedX"
-                  },
-                  "parameters": [
-                    "Player"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "PlayerFlashlight",
-                    "=",
-                    "Player.X()+2",
-                    "=",
-                    "Player.Y()+8"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "FlippedX"
-                  },
-                  "parameters": [
-                    "Player"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "PlayerFlashlight",
-                    "=",
-                    "Player.X()+69",
-                    "=",
-                    "Player.Y()+8"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "Player",
-                "\"Running\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "FlippedX"
-                  },
-                  "parameters": [
-                    "Player"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "PlayerFlashlight",
-                    "=",
-                    "Player.X()+13",
-                    "=",
-                    "Player.Y()+6"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "FlippedX"
-                  },
-                  "parameters": [
-                    "Player"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "PlayerFlashlight",
-                    "=",
-                    "Player.X()+58",
-                    "=",
-                    "Player.Y()+6"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            }
-          ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "Wheelchair",
-                "\"Empty\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "PlayerFlashlight",
-                "=",
-                "Wheelchair.X()+58",
-                "=",
-                "Wheelchair.Y()+6"
               ],
               "subInstructions": []
             }
@@ -5535,7 +4767,7 @@
               },
               "parameters": [
                 "",
-                "Right"
+                "Left"
               ],
               "subInstructions": []
             }
@@ -5548,7 +4780,7 @@
               },
               "parameters": [
                 "Player",
-                "no"
+                "yes"
               ],
               "subInstructions": []
             }
@@ -5567,7 +4799,7 @@
               },
               "parameters": [
                 "",
-                "Left"
+                "Right"
               ],
               "subInstructions": []
             }
@@ -5580,7 +4812,7 @@
               },
               "parameters": [
                 "Player",
-                "yes"
+                "no"
               ],
               "subInstructions": []
             }
@@ -5606,126 +4838,17 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "CameraZoom",
-                "=",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
               "type": {
                 "inverted": false,
-                "value": "ZoomCamera"
+                "value": "CameraX"
               },
               "parameters": [
                 "",
-                "Variable(CameraZoom)",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "Wheelchair",
-                "\"Empty\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "FixCamera"
-              },
-              "parameters": [
-                "",
-                "Player",
-                "-10000",
-                "-10000",
-                "100000",
-                "600",
-                "",
-                "",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "AnimationName"
-              },
-              "parameters": [
-                "Wheelchair",
-                "\"Empty\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "FixCamera"
-              },
-              "parameters": [
-                "",
-                "Wheelchair",
-                "-10000",
-                "-10000",
-                "100000",
-                "600",
-                "",
+                "=",
+                "Player.X()",
                 "",
                 ""
               ],
@@ -6106,7 +5229,7 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SystemInfo::HasTouchScreen"
+                    "value": "DepartScene"
                   },
                   "parameters": [
                     ""
@@ -6118,228 +5241,197 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Cache"
+                    "value": "TouchSimulateMouse"
                   },
                   "parameters": [
-                    "VirtualControls"
+                    "",
+                    "no"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": [
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "DepartScene"
-                      },
-                      "parameters": [
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "LeftButton",
+                    "",
+                    "",
+                    ""
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TouchSimulateMouse"
-                      },
-                      "parameters": [
-                        "",
-                        "no"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SourisSurObjet"
-                      },
-                      "parameters": [
-                        "LeftButton",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlatformBehavior::SimulateLeftKey"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "PlatformerObject"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SourisSurObjet"
-                      },
-                      "parameters": [
-                        "RightButton",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlatformBehavior::SimulateRightKey"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "PlatformerObject"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SourisSurObjet"
-                      },
-                      "parameters": [
-                        "TopButton",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlatformBehavior::SimulateUpKey"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "PlatformerObject"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlatformBehavior::SimulateLadderKey"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "PlatformerObject"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SourisSurObjet"
-                      },
-                      "parameters": [
-                        "BottomButton",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlatformBehavior::SimulateDownKey"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "PlatformerObject"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SourisSurObjet"
-                      },
-                      "parameters": [
-                        "JumpButton",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlatformBehavior::SimulateJumpKey"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "PlatformerObject"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
+                  "subInstructions": []
                 }
-              ]
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::SimulateLeftKey"
+                  },
+                  "parameters": [
+                    "PlayerHitBox",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "RightButton",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::SimulateRightKey"
+                  },
+                  "parameters": [
+                    "PlayerHitBox",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "TopButton",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::SimulateUpKey"
+                  },
+                  "parameters": [
+                    "PlayerHitBox",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::SimulateLadderKey"
+                  },
+                  "parameters": [
+                    "PlayerHitBox",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "BottomButton",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::SimulateDownKey"
+                  },
+                  "parameters": [
+                    "PlayerHitBox",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "JumpButton",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlatformBehavior::SimulateJumpKey"
+                  },
+                  "parameters": [
+                    "PlayerHitBox",
+                    "PlatformerObject"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
           ],
           "parameters": []
@@ -6633,2060 +5725,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Pick up objects",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "Indicators"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": true,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "HeliumIndicator",
-                    "=",
-                    "PlayerHitBox.X()-ScreenWidth()/2+20*Inventory::Count(\"Inventory\", \"Item\")",
-                    "=",
-                    "PlayerHitBox.Y()-ScreenHeight()/2"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "FuelCanIndicator",
-                    "=",
-                    "PlayerHitBox.X()-ScreenWidth()/2",
-                    "=",
-                    "PlayerHitBox.Y()-ScreenHeight()/2"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "MenuLight",
-                    "=",
-                    "PlayerHitBox.X()-ScreenWidth()/2"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "FuelCan",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SourisSurObjet"
-                      },
-                      "parameters": [
-                        "FuelCan",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "FuelCan"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "FuelCanIndicator",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "FuelText",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Inventory::Add"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Inventory\"",
-                        "\"Item\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "Helium",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SourisSurObjet"
-                      },
-                      "parameters": [
-                        "Helium",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "Helium"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "HeliumIndicator",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "HeliumText",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Inventory::Add"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Inventory\"",
-                        "\"Item\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Wheelchair",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SourisSurObjet"
-                  },
-                  "parameters": [
-                    "Wheelchair",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MouseButtonReleased"
-                  },
-                  "parameters": [
-                    "",
-                    "Left"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "Wheelchair",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "AnimationName"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "\"Empty\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": [],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "\"Not_Inflated\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Cache"
-                      },
-                      "parameters": [
-                        "Player"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "PlatformerObject",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": true,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "AnimationName"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "\"Not_Inflated\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": [],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "\"Empty\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "PlayerGroup",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ActivateBehavior"
-                      },
-                      "parameters": [
-                        "PlayerHitBox",
-                        "PlatformerObject",
-                        "yes"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "FuelText",
-                    "=",
-                    "ToString(round(FuelCan.Variable(Percentage)))+\"%\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "HeliumText",
-                    "=",
-                    "ToString(round(Helium.Variable(Percentage)))+\"%\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "AnimationName"
-                  },
-                  "parameters": [
-                    "Wheelchair",
-                    "\"Empty\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Visible"
-                  },
-                  "parameters": [
-                    "HeliumIndicator"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Set animation of wheelchair to match inflation including air leak",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        "<=",
-                        "33"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "\"Not_Inflated\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        ">",
-                        "33"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        "<=",
-                        "66"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "\"Semi_Inflated\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        ">",
-                        "66"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        "<=",
-                        "100"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "\"Inflated\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        ">",
-                        "100"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarObjet"
-                          },
-                          "parameters": [
-                            "Wheelchair",
-                            "Boosting",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "Wheelchair",
-                            "\"Inflated_Air\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarObjet"
-                          },
-                          "parameters": [
-                            "Wheelchair",
-                            "Boosting",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "Wheelchair",
-                            "\"Inflated_Boost_Air\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ]
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Add inflation (up/down) logic",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        ">=",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        "-",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "KeyPressed"
-                      },
-                      "parameters": [
-                        "",
-                        "Up"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Helium",
-                        "Percentage",
-                        ">",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        "+",
-                        "1.5"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Helium",
-                        "Percentage",
-                        "-",
-                        "0.05"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarObjet"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "Inflation",
-                        ">",
-                        "100"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MettreY"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "=",
-                        "Player.Y()-(Wheelchair.Variable(Inflation)-92)"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Add boost (left/right) logic",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PosY"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "<",
-                        "470"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Visible"
-                      },
-                      "parameters": [
-                        "FuelCanIndicator"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MettreX"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "+",
-                        "0.5"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyPressed"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "VarObjet"
-                          },
-                          "parameters": [
-                            "FuelCan",
-                            "Percentage",
-                            ">",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MettreX"
-                          },
-                          "parameters": [
-                            "Wheelchair",
-                            "-",
-                            "2"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarObjet"
-                          },
-                          "parameters": [
-                            "FuelCan",
-                            "Percentage",
-                            "-",
-                            "0.2"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarObjet"
-                          },
-                          "parameters": [
-                            "Wheelchair",
-                            "Boosting",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "KeyReleased"
-                          },
-                          "parameters": [
-                            "",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarObjet"
-                          },
-                          "parameters": [
-                            "Wheelchair",
-                            "Boosting",
-                            "=",
-                            "0"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ]
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Challenge win",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CollisionNP"
-                      },
-                      "parameters": [
-                        "Wheelchair",
-                        "LightSwitch",
-                        "",
-                        "",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Challenge_1_2_Complete",
-                        "=",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "Challenge fail",
-                  "comment2": ""
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "Challenge_1_2_Complete",
-                        "=",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "PosX"
-                          },
-                          "parameters": [
-                            "Wheelchair",
-                            ">",
-                            "LightSwitch.X()"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "BuiltinCommonInstructions::Or"
-                          },
-                          "parameters": [],
-                          "subInstructions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "PosY"
-                              },
-                              "parameters": [
-                                "Wheelchair",
-                                ">",
-                                "LightSwitch.Y()"
-                              ],
-                              "subInstructions": []
-                            }
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "Lives",
-                            "-",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "JustDied",
-                            "=",
-                            "1"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "disabled": false,
-          "folded": false,
-          "name": "Dialog",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "SpeechGroup"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "SpeechBubble",
-                    "=",
-                    "PlayerHitBox.X()-12",
-                    "=",
-                    "PlayerHitBox.Y()-160"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "SpeechText",
-                    "=",
-                    "SpeechBubble.X()+Variable(SpeechOffsetX)",
-                    "=",
-                    "SpeechBubble.Y()+50"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Timer"
-                  },
-                  "parameters": [
-                    "",
-                    "2+Variable(SpeechDelay)",
-                    "\"SpeechBubbleTimer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Visible"
-                  },
-                  "parameters": [
-                    "SpeechGroup"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "SpeechGroup"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "SpeechNumber",
-                    "+",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Player",
-                    ">",
-                    "1000"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "SpeechNumber",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "CameraZoom",
-                        ">",
-                        "0.8"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "CameraZoom",
-                        "-",
-                        "0.01"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": [],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "SpeechGroup",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TextObject::String"
-                      },
-                      "parameters": [
-                        "SpeechText",
-                        "=",
-                        "\"Seems like I found my source of lights...\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "SpeechOffsetX",
-                        "=",
-                        "40"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "SpeechBubble",
-                        "\"lg\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ResetTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"SpeechBubbleTimer\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Player",
-                    ">",
-                    "1000"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "SpeechNumber",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": [],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "SpeechGroup",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "SpeechText",
-                    "=",
-                    "\"Hmm... I wonder if I can make it brighter.\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarScene"
-                  },
-                  "parameters": [
-                    "SpeechOffsetX",
-                    "=",
-                    "40"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetAnimationName"
-                  },
-                  "parameters": [
-                    "SpeechBubble",
-                    "\"lg\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"SpeechBubbleTimer\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Player",
-                    ">",
-                    "1200"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "SpeechNumber",
-                    "=",
-                    "2"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "CameraZoom",
-                        ">",
-                        "0.6"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "CameraZoom",
-                        "-",
-                        "0.01"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": [],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "SpeechGroup",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TextObject::String"
-                      },
-                      "parameters": [
-                        "SpeechText",
-                        "=",
-                        "\"Oh, I see a lightswitch way up there!\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "SpeechDelay",
-                        "=",
-                        "4"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "SpeechOffsetX",
-                        "=",
-                        "45"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "SpeechBubble",
-                        "\"lg\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ResetTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"SpeechBubbleTimer\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Player",
-                    ">",
-                    "1200"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "SpeechNumber",
-                    "=",
-                    "3"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "CameraZoom",
-                        "<",
-                        "0.9"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "CameraZoom",
-                        "+",
-                        "0.01"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": [],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "SpeechGroup",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TextObject::String"
-                      },
-                      "parameters": [
-                        "SpeechText",
-                        "=",
-                        "\"But how can I get up there?!\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "SpeechOffsetX",
-                        "=",
-                        "75"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "SpeechBubble",
-                        "\"lg\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ResetTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"SpeechBubbleTimer\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "PosX"
-                  },
-                  "parameters": [
-                    "Player",
-                    ">",
-                    "1200"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "SpeechNumber",
-                    "=",
-                    "3"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "VarScene"
-                      },
-                      "parameters": [
-                        "CameraZoom",
-                        "<",
-                        "0.9"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "CameraZoom",
-                        "+",
-                        "0.01"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BuiltinCommonInstructions::Once"
-                      },
-                      "parameters": [],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Montre"
-                      },
-                      "parameters": [
-                        "SpeechGroup",
-                        ""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "TextObject::String"
-                      },
-                      "parameters": [
-                        "SpeechText",
-                        "=",
-                        "\"But how can I get up there?!\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "SpeechOffsetX",
-                        "=",
-                        "75"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetAnimationName"
-                      },
-                      "parameters": [
-                        "SpeechBubble",
-                        "\"lg\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ResetTimer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"SpeechBubbleTimer\""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ],
       "layers": [
@@ -8710,36 +5748,6 @@
           "name": "",
           "visibility": true,
           "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            },
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            },
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            },
             {
               "defaultSize": true,
               "defaultViewport": true,
@@ -8774,39 +5782,6 @@
             }
           ],
           "effects": []
-        },
-        {
-          "ambientLightColorB": 32,
-          "ambientLightColorG": 32,
-          "ambientLightColorR": 32,
-          "followBaseLayerCamera": true,
-          "isLightingLayer": true,
-          "name": "Lighting",
-          "visibility": true,
-          "cameras": [],
-          "effects": [
-            {
-              "effectType": "Night",
-              "name": "Dark night",
-              "doubleParameters": {
-                "intensity": 0.1,
-                "opacity": 0.1
-              },
-              "stringParameters": {},
-              "booleanParameters": {}
-            }
-          ]
-        },
-        {
-          "ambientLightColorB": 1702453580,
-          "ambientLightColorG": 8515872,
-          "ambientLightColorR": 8494536,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "HUD",
-          "visibility": true,
-          "cameras": [],
-          "effects": []
         }
       ],
       "behaviorsSharedData": [
@@ -8817,14 +5792,6 @@
         {
           "name": "HorizontalTiledSpriteParallax",
           "type": "Parallax::HorizontalTiledSpriteParallax"
-        },
-        {
-          "name": "Physics2",
-          "type": "Physics2::Physics2Behavior",
-          "gravityX": 0,
-          "gravityY": 9.8,
-          "scaleX": 100,
-          "scaleY": 100
         },
         {
           "name": "Platform",
@@ -9386,6 +6353,7 @@
         "parallax",
         "tiled"
       ],
+      "dependencies": [],
       "eventsFunctions": [],
       "eventsBasedBehaviors": [
         {
@@ -9399,6 +6367,7 @@
               "fullName": "",
               "functionType": "Action",
               "name": "doStepPostEvents",
+              "private": false,
               "sentence": "",
               "events": [
                 {
@@ -9504,6 +6473,7 @@
               "fullName": "",
               "functionType": "Action",
               "name": "doStepPostEvents",
+              "private": false,
               "sentence": "",
               "events": [
                 {
